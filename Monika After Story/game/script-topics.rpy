@@ -8035,6 +8035,24 @@ label monika_song_dream:
     m 1eka "Now that you're here, [player], I don't have to dream anymore."
     m 1ekbfa "My dream finally came true."
     return
+    
+    init 5 python:
+    addEvent(Event(persistent.event_database,eventlabel="monika_song_not_alone",category=['songs'],prompt="You Are Not Alone",pool=True, random=True))
+    
+label monika_song_not_alone:
+    m 1dso "{i}~Everyday I sit and ask myself~{/i}"
+    m "{i}~How did love slip away?~{/i}"
+    m 3dso "{i}~Something whispers in my ear and says...~{/i}"
+    m 4dso "{i}~That you are not alone.~{/i}"
+    m "{i}~For I am here with you.~{/i}"
+    m 4dso "{i}~Though you're far away...~{/i}"
+    m 3dso "{i}~I am here to stay.~{/i}"
+    m 1hubfb "I know that it is going to be some time before we can finally be together in your world."
+    m 1ekbfa "But I want to thank you for staying with me, even with how far away it feels that we are sometimes."
+    m "It's funny isn't it? I mean we're in the same room right now, maybe only inches away from each other"   
+    m "But yet, we're still so far apart..."
+    m "So thank you [player], for staying with me and being the whisper in my ear."
+return
 
 # been to prom?
 default persistent._mas_pm_gone_to_prom = None
